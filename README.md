@@ -9,7 +9,7 @@ Run `$ sudo autowifi` at boot or at any other time to connect to the highest-pri
 
 The only adaptations you need to make to the script are:
 1. Make sure the wireless interface name at the top of the script is correct for your hardware
-2. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string; ssids are searched in order, so list your ssids from highest to lowest priority
+2. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
 
 # Dependencies
 - The utilities the script needs are these: kill, pkill, ifconfig, iwlist, iwconfig, wpa_supplicant, wpa_passphrase and udhcpc (a minimalistic DHCP client)
