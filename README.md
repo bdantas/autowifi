@@ -17,4 +17,4 @@ The only adaptations you need to make to the script are:
 - On **GNU/Linux OS with coreutils** (e.g., Debian) five packages are required: **procps** (provides kill and pkill), **net-tools** (provides ifconfig), **wireless-tools** (provides iwlist and iwconfig), **wpasupplicant** (provides wpa_supplicant and wpa_passphrase) and **udhcpc**
 
 # Want an icon?
-In keeping with UNIX philosophy of each application doing only one thing, this is a one-off script that connects to the highest-priority wireless network currently available. For a script that continuously runs in the background, showing an icon when there is internet access, use my *network-monitor*.
+In keeping with UNIX philosophy of each application doing only one thing, this is a one-off script that connects to the highest-priority wireless network currently available. For a script that continuously runs in the background, showing an icon when there is internet access, use my *wifi-monitor*.
