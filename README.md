@@ -17,4 +17,4 @@ The only adaptations you need to make to the script are:
 - On **GNU/Linux OS with coreutils** (e.g., Debian) five packages are required: **procps** (provides kill and pkill), **net-tools** (provides ifconfig), **wireless-tools** (provides iwlist and iwconfig), **wpasupplicant** (provides wpa_supplicant and wpa_passphrase) and **udhcpc**
 
 # Want to see an icon while wifi is connected?
-Check out *wifi-monitor*
+Check out https://github.com/bdantas/wifi-monitor
