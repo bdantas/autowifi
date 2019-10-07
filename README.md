@@ -5,7 +5,7 @@ Ditch your bloated network manager
 Simple shell script for GNU/Linux that connects to the highest-priority wireless network among the available wireless networks
 
 # Usage
-Run `$ sudo autowifi` at boot or at any other time to connect to the highest-priority wireless network among the available wireless networks.
+Run `$ sudo autowifi` at boot or at any other time to connect to the highest-priority wireless network among the currently-available wireless networks.
 
 The only adaptations you need to make to the script are:
 1. Make sure the wireless interface name at the top of the script is correct for your hardware
