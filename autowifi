@@ -1,0 +1,63 @@
+#!/bin/sh
+
+# autowifi v4.0
+# Bruno "GNUser" Dantas GPLv3
+
+# user variable:
+iface=wlan0
+
+main()
+{
+	start_fresh
+	scan
+
+	# ssids are searched in order, so first one found wins:
+	ssid="AndroidAP"; password="phoNePasswOrd"; search && connect
+	ssid="homeSweetHome"; password="hoMepasswoRd"; search && connect
+	ssid="openCafe"; password=""; search && connect
+}
+
+start_fresh()
+{
+	kill $(pgrep -f autowifi | grep -v $$) 2>/dev/null # kill other instances of this script
+	pkill -f iwlist
+	pkill -f wpa_supplicant
+	pkill -f udhcpc
+
+	# restart the interface
+	ifconfig $iface down
+	ifconfig $iface up
+}
+
+scan()
+{
+	echo "Scanning available networks..."
+	iwlist $iface scanning > $scan_results
+}
+
+search()
+{
+	grep -q "$ssid" $scan_results && return 0 || return 1
+}
+
+connect()
+{
+	echo "Found ${ssid}, will attempt to connect..."
+	if [ -z "$password" ]; then
+		iwconfig $iface essid "$ssid" &
+	else
+		wpa_passphrase "$ssid" "$password" > $auth_file
+		wpa_supplicant -i $iface -c $auth_file &
+	fi
+
+	sleep 5
+	udhcpc -i $iface
+
+	exit
+}
+
+# internal variables:
+scan_results=/tmp/wifi-scan-results.txt
+auth_file=/tmp/wifi.conf
+
+main
