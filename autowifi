@@ -42,7 +42,7 @@ search()
 
 connect()
 {
-	echo "Found ${ssid}, will attempt to connect..."
+	echo "Found ${ssid}, connecting..."
 	if [ -z "$password" ]; then
 		iwconfig $iface essid "$ssid" &
 	else
