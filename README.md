@@ -13,5 +13,5 @@ The only adaptations you need to make to the script are:
 
 # Dependencies
 - The utilities the script needs are these: kill, pkill, ifconfig, iwlist, iwconfig, wpa_supplicant, wpa_passphrase and udhcpc
-- On **GNU/Linux OS with BusyBox** you probably only have to install two packages: **wireless-tools** (provides iwlist and iwconfig) and **wpa_supplicant** (provides wpa_supplicant and wpa_passphrase). Depending on which applets it was compiled with, BusyBox may provide all the other utilities (kill, pkill, ifconfig and udhcpc),
+- On **GNU/Linux OS with BusyBox** you probably only have to install two packages: **wireless-tools** (provides iwlist and iwconfig) and **wpa_supplicant** (provides wpa_supplicant and wpa_passphrase). Unless it was compiled without some applets, BusyBox provides the other utilities (kill, pkill, ifconfig and udhcpc).
 - On **GNU/Linux OS with coreutils** up to five packages may be required: **procps** (provides kill and pkill), **net-tools** (provides ifconfig), **wireless-tools** (provides iwlist and iwconfig), **wpasupplicant** (provides wpa_supplicant and wpa_passphrase) and **udhcpc**
