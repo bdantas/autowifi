@@ -8,8 +8,8 @@ Simple shell script for GNU/Linux that connects to the highest-priority wireless
 Run `$ sudo autowifi` at boot or at any other time to connect to the highest-priority wireless network among the available wireless networks.
 
 The only adaptations you need to make to the script are:
-1. Make sure the wireless interface name at the top of the script is correct
-2. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string
+1. Make sure the wireless interface name at the top of the script is correct for your hardware
+2. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string; ssids are searched in order, so list your ssids from highest to lowest priority
 
 # Dependencies
 - The utilities the script needs are these: kill, pkill, ifconfig, iwlist, iwconfig, wpa_supplicant, wpa_passphrase and udhcpc
