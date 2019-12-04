@@ -12,7 +12,7 @@ The only adaptations you need to make to the script are:
 2. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
 
 # Dependencies
-- The utilities the script needs are these: kill, pkill, ifconfig, iwlist, iwconfig, wpa_supplicant, wpa_passphrase and udhcpc (a minimalistic DHCP client)
+- The utilities the script needs are these: kill, pkill, ifconfig, iwlist, wpa_supplicant, wpa_passphrase, and dhclient
 - On **GNU/Linux OS with BusyBox** (e.g., Tiny Core Linux) you probably only have to install three packages: **wireless-tools** (provides iwlist and iwconfig), **wpa_supplicant** (provides wpa_supplicant and wpa_passphrase), and **dhclient** (package may be called *isc-dhcp-client* or *dhcp*); BusyBox provides everything else (kill, pkill, ifconfig)
 - On **GNU/Linux OS with coreutils** (e.g., Debian) five packages are required: **procps** (provides kill and pkill), **net-tools** (provides ifconfig), **wireless-tools** (provides iwlist and iwconfig), **wpasupplicant** (provides wpa_supplicant and wpa_passphrase) and **isc-dhcp-client**
 
