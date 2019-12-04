@@ -1,10 +1,11 @@
 #!/bin/sh
 
-# autowifi v4.0
+# autowifi v5.0
 # Bruno "GNUser" Dantas GPLv3
 
-# user variable:
+# user variables:
 iface=wlan0
+dhclient_config_file=/etc/dhcp/dhclient.conf
 
 main()
 {
@@ -22,7 +23,7 @@ start_fresh()
 	kill $(pgrep -f autowifi | grep -v $$) 2>/dev/null # kill other instances of this script
 	pkill -f iwlist
 	pkill -f wpa_supplicant
-	pkill -f udhcpc
+	pkill -f dhclient
 
 	# restart the interface
 	ifconfig $iface down
@@ -43,15 +44,17 @@ search()
 connect()
 {
 	echo "Found ${ssid}, connecting..."
+
 	if [ -z "$password" ]; then
-		iwconfig $iface essid "$ssid" &
+		printf 'network={\n\tssid="%s"\n\tkey_mgmt=NONE\n}\n' $ssid > $auth_file
 	else
 		wpa_passphrase "$ssid" "$password" > $auth_file
-		wpa_supplicant -i $iface -c $auth_file &
 	fi
+	wpa_supplicant -i $iface -c $auth_file &
 
-	sleep 5
-	udhcpc -i $iface
+	sleep 3
+
+	dhclient -v -cf $dhclient_config_file $iface
 
 	exit
 }
