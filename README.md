@@ -14,7 +14,7 @@ The only adaptations you need to make to the script are:
 # Dependencies
 - The utilities the script needs are these: kill, pkill, ifconfig, iwlist, wpa_supplicant, wpa_passphrase, and dhclient
 - On **GNU/Linux OS with BusyBox** (e.g., Tiny Core Linux) you probably only have to install three packages: **wireless-tools** (provides iwlist and iwconfig), **wpa_supplicant** (provides wpa_supplicant and wpa_passphrase), and **dhclient** (package may be called *isc-dhcp-client* or *dhcp*); BusyBox provides everything else (kill, pkill, ifconfig)
-- On **GNU/Linux OS with coreutils** (e.g., Debian) five packages are required: **procps** (provides kill and pkill), **net-tools** (provides ifconfig), **wireless-tools** (provides iwlist and iwconfig), **wpasupplicant** (provides wpa_supplicant and wpa_passphrase) and **isc-dhcp-client**
+- On **GNU/Linux OS with coreutils** (e.g., Debian) five packages are required: **procps** (provides kill and pkill), **net-tools** (provides ifconfig), **wireless-tools** (provides iwlist), **wpasupplicant** (provides wpa_supplicant and wpa_passphrase) and **isc-dhcp-client** (provides dhclient)
 
 # Want to see an icon while wifi is connected?
 Check out https://github.com/bdantas/wifi-monitor
