@@ -16,7 +16,7 @@ $ sudo apt install procps net-tools wireless-tools wpasupplicant isc-dhcp-client
 $ cd /tmp
 $ wget https://github.com/bdantas/autowifi/archive/master.zip
 $ unzip master.zip
-$ sudo cp ./autowifi-master/autowifi /usr/local/bin/autowifi
+$ sudo cp ./autowifi-master/autowifi /usr/local/bin/
 $ sudo chmod a+x /usr/local/bin/autowifi
 ```
 Note: If your operating system is not Debian-like, adjust the first step
