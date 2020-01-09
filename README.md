@@ -4,17 +4,25 @@ Ditch your bloated network manager
 # Purpose
 Simple shell script for GNU/Linux that connects to the highest-priority wireless network among the available wireless networks
 
+# What you need
+0. GNU/Linux operating system and this script
+1. A handful of core and networking utilities (kill, pkill, ifconfig, iwlist, wpa_supplicant, dhclient)
+2. Check "user variables" at top of script for correctness
+3. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
+
+# Installation
+```
+$ sudo apt install procps net-tools wireless-tools wpasupplicant isc-dhcp-client
+$ cd /tmp
+$ wget https://github.com/bdantas/autowifi/archive/master.zip
+$ unzip master.zip
+$ sudo cp ./autowifi/autowifi /usr/local/bin/autowifi
+$ sudo chmod a+x /usr/local/bin/autowifi
+```
+Note: If your operating system is not Debian-like, adjust the first step
+
 # Usage
 Run `$ sudo autowifi` at boot or at any other time to connect to the highest-priority wireless network among the currently-available wireless networks.
-
-The only adaptations you need to make to the script are:
-1. Make sure the wireless interface name at the top of the script is correct for your hardware
-2. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
-
-# Dependencies
-- The utilities the script needs are these: kill, pkill, ifconfig, iwlist, wpa_supplicant, wpa_passphrase, and dhclient
-- On **GNU/Linux OS with BusyBox** (e.g., Tiny Core Linux) you probably only have to install three packages: **wireless-tools** (provides iwlist), **wpa_supplicant** (provides wpa_supplicant and wpa_passphrase), and **dhcp** (provides dhclient); BusyBox provides everything else (kill, pkill, ifconfig)
-- On **GNU/Linux OS with coreutils** (e.g., Debian) five packages are required: **procps** (provides kill and pkill), **net-tools** (provides ifconfig), **wireless-tools** (provides iwlist), **wpasupplicant** (provides wpa_supplicant and wpa_passphrase) and **isc-dhcp-client** (provides dhclient)
 
 # Want to see an icon while wifi is connected?
 Check out https://github.com/bdantas/wifi-monitor
