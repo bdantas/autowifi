@@ -29,7 +29,7 @@ $ sudo chmod a+x /usr/local/bin/autowifi
 Note: If your operating system is not Debian-like, adjust the first step
 
 # Usage
-Run `sudo autowifi` at boot or at any other time to connect to the highest-priority wireless network among the currently-available wireless networks.
+Run `sudo autowifi` at boot or at any other time to connect to the highest-priority wireless network currently-available
 
 # Want to see an icon while wifi is connected?
 Check out https://github.com/bdantas/wifi-monitor
