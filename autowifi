@@ -12,7 +12,7 @@ main()
 	start_fresh
 	scan
 
-	# SSIDs are searched in order, will connect to the first one found:
+	# SSIDs are searched in order, script connects to the first one found:
 	ssid="AndroidAP"; password="phoNePasswOrd"; search && connect
 	ssid="homeSweetHome"; password="hoMepasswoRd"; search && connect
 	ssid="openCafe"; password=""; search && connect
