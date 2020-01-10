@@ -2,7 +2,7 @@
 Ditch your bloated network manager
 
 # Purpose
-Simple shell script for GNU/Linux that connects to the highest-priority wireless network among the available wireless networks
+Simple shell script for GNU/Linux that connects to the highest-priority wireless network currently available
 
 # What you need
 0. GNU/Linux operating system and this script
