@@ -10,14 +10,12 @@ Simple shell script for GNU/Linux that connects to the highest-priority wireless
 2. Check "user variables" at top of script for correctness
 3. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
 
-<sub><sup>
-Debian package names (may be different in other distros)  
-1 *procps* package  
-2 *net-tools* package  
+Debian package names (may be different in other distros):  
+1 *procps*  
+2 *net-tools*  
 3 *wireless-tools*  
 4 *wpasupplicant*  
 5 *isc-dhcp-client*  
-</sub></sup>
 
 # Installation
 ```
