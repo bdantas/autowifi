@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# autowifi v5.0
+# autowifi v5.1
 # Bruno "GNUser" Dantas GPLv3
 
 # user variables:
@@ -16,6 +16,9 @@ main()
 	ssid="AndroidAP"; password="phoNePasswOrd"; search && connect
 	ssid="homeSweetHome"; password="hoMepasswoRd"; search && connect
 	ssid="openCafe"; password=""; search && connect
+
+	# still here, so none of the above SSIDs were found:
+	echo "No known hotspots within range."; exit
 }
 
 start_fresh()
