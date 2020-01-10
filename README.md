@@ -11,11 +11,11 @@ Simple shell script for GNU/Linux that connects to the highest-priority wireless
 3. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
 
 ###### Debian package names (may be different in other distros)
-1 *procps* package
-2 *net-tools* package
-3 *wireless-tools*
-4 *wpasupplicant*
-5 *isc-dhcp-client*
+1 *procps* package 
+2 *net-tools* package 
+3 *wireless-tools* 
+4 *wpasupplicant* 
+5 *isc-dhcp-client* 
 
 # Installation
 ```
