@@ -6,7 +6,7 @@ Simple shell script for GNU/Linux that connects to the highest-priority wireless
 
 # What you need
 0. GNU/Linux operating system and this script
-1. A handful of core and networking utilities (kill, pkill, ifconfig, iwlist, wpa_supplicant, dhclient)
+1. A handful of core and networking utilities (kill<sup>1</sup>, pkill, ifconfig, iwlist, wpa_supplicant, dhclient)
 2. Check "user variables" at top of script for correctness
 3. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
 
