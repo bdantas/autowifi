@@ -1,11 +1,10 @@
 #!/bin/sh
 
-# autowifi v5.1
+# autowifi v6.0
 # Bruno "GNUser" Dantas GPLv3
 
 # user variables:
 iface=wlan0
-dhclient_config_file=/etc/dhcp/dhclient.conf
 
 main()
 {
@@ -13,9 +12,9 @@ main()
 	scan
 
 	# SSIDs are searched in order, script connects to the first one found:
-	ssid="AndroidAP"; password="phoNePasswOrd"; search && connect
-	ssid="homeSweetHome"; password="hoMepasswoRd"; search && connect
-	ssid="openCafe"; password=""; search && connect
+	ssid="AndroidAP"; password="PhonePassWord"; search && connect
+	ssid="HomeSweetHome"; password="hoMepassworD"; search && connect
+	ssid="OpenCafe"; password=""; search && connect
 
 	# still here, so none of the above SSIDs were found:
 	echo "No known hotspots within range."; exit
@@ -26,7 +25,7 @@ start_fresh()
 	kill $(pgrep -f autowifi | grep -v $$) 2>/dev/null # kill other instances of this script
 	pkill -f iwlist
 	pkill -f wpa_supplicant
-	pkill -f dhclient
+	pkill -f udhcpc
 
 	# restart the interface
 	ifconfig $iface down
@@ -57,8 +56,7 @@ connect()
 
 	sleep 3
 
-	dhclient -v -cf $dhclient_config_file $iface
-
+	udhcpc -S -i $iface
 	exit
 }
 
