@@ -10,12 +10,16 @@ Simple shell script for GNU/Linux that connects to the highest-priority wireless
 2. Check "user variables" at top of script for correctness
 3. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
 
-Debian package names (may be different in other distros):  
-1 *procps*  
-2 *net-tools*  
-3 *wireless-tools*  
-4 *wpasupplicant*  
-5 *udhcpc* (also available as a BusyBox applet)
+Debian package names:  
+1: *procps*  
+2: *net-tools*  
+3: *wireless-tools*  
+4: *wpasupplicant*  
+5: *udhcpc* (also available as a BusyBox applet)
+
+Tiny Core Linux extension names:
+1,2,5: Part of BusyBox, so already present in base system
+3-4: Get these by installing wpa_supplicant (called wpa_supplicant-dbus in x86_64 repo) and its dependencies
 
 # Installation
 ```
