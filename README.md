@@ -17,8 +17,8 @@ Debian package names:
 4: *wpasupplicant*  
 5: *udhcpc* (also available as a BusyBox applet)
 
-Tiny Core Linux extension names:
-1,2,5: Part of BusyBox, so already present in base system
+Tiny Core Linux extension names:  
+1,2,5: Part of BusyBox, so already present in base system  
 3-4: Get these by installing wpa_supplicant (called wpa_supplicant-dbus in x86_64 repo) and its dependencies
 
 # Installation
