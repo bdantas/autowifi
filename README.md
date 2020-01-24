@@ -19,7 +19,7 @@ Debian package names:
 
 Tiny Core Linux extension names:  
 1,2,5: Part of BusyBox, so already present in base system  
-3-4: Get these by loading the wpa_supplicant[-dbus] extension and its dependencies
+3-4: Get these by loading the wpa_supplicant[-dbus] extension
 
 # Installation
 ```
