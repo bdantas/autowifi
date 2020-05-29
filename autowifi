@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# autowifi v7.2
+# autowifi v8.0
 # Bruno "GNUser" Dantas GPLv3
 
 # user variables:
@@ -26,7 +26,7 @@ start_fresh()
 	pkill -f iwlist
 	pkill -f wpa_supplicant
 	pkill -f udhcpc
-	
+
 	# reload kernel module to flush cached scan results
 	ifconfig $iface down
 	module=$(basename $(readlink -f /sys/class/net/$iface/device/driver/module))
@@ -51,9 +51,11 @@ connect()
 	echo "Found ${ssid}, connecting..."
 
 	if [ -z "$password" ]; then
-		printf 'network={\n\tssid="%s"\n\tkey_mgmt=NONE\n}\n' $ssid > $auth_file
+		printf 'ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=root\nupdate_config=1\n' > $auth_file
+		printf 'network={\n\tssid="%s"\n\tkey_mgmt=NONE\n}\n' $ssid >> $auth_file
 	else
-		wpa_passphrase "$ssid" "$password" > $auth_file
+		printf 'ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=root\nupdate_config=1\n' > $auth_file
+		wpa_passphrase "$ssid" "$password" >> $auth_file
 	fi
 	wpa_supplicant -i $iface -c $auth_file &
 
