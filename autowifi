@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# autowifi v7.1
+# autowifi v7.2
 # Bruno "GNUser" Dantas GPLv3
 
 # user variables:
@@ -28,6 +28,7 @@ start_fresh()
 	pkill -f udhcpc
 	
 	# reload kernel module to flush cached scan results
+	ifconfig $iface down
 	module=$(basename $(readlink -f /sys/class/net/$iface/device/driver/module))
 	modprobe -r $module
 	modprobe $module
