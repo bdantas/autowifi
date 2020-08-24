@@ -23,7 +23,7 @@ main()
 start_fresh()
 {
 	kill $(pgrep -f autowifi | grep -v $$) 2>/dev/null # kill other instances of this script
-	pkill -f iwlist
+	pkill -f iw
 	pkill -f wpa_supplicant
 	pkill -f udhcpc
 
@@ -38,7 +38,7 @@ start_fresh()
 scan()
 {
 	echo "Scanning available networks..."
-	iwlist $iface scanning > $scan_results
+	iw dev $iface scan > $scan_results
 }
 
 search()
