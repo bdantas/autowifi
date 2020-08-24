@@ -15,12 +15,12 @@ Debian package names:
 2: *net-tools*  
 3: *iw*  
 4: *wpasupplicant*  
-5: *udhcpc* (also available as a BusyBox applet)
+5: *udhcpc* (also available as a BusyBox applet)  
 Getting all dependencies on Debian/Devuan: `sudo apt install procps net-tools iw wpasupplicant udhcpc`
 
 Tiny Core Linux:  
 1,2,5: Part of BusyBox, so already present in base system  
-3-4: Get these by loading the *wpa_supplicant[-dbus]* and *iw* extensions
+3-4: Get these by loading the *wpa_supplicant[-dbus]* and *iw* extensions  
 Getting all dependencies on Tiny Core Linux: `tce-load -wi wpa_supplicant-dbus iw`
 
 # Installation
