@@ -10,7 +10,7 @@ Simple shell script for GNU/Linux that connects to the highest-priority wireless
 2. Check "user variables" at top of script for correctness
 3. Populate the ssid/password combinations as appropriate; if an ssid does not have a password, just use an empty string (note: ssids are searched in order, so list your ssids from highest to lowest priority)
 
-**Debian/Devuan package names:**
+**Debian/Devuan package names:**  
 1: *procps*  
 2: *net-tools*  
 3: *iw*  
@@ -20,7 +20,7 @@ Installing all the dependencies on Debian/Devuan: `sudo apt install procps net-t
 
 **Tiny Core Linux extensions names:**  
 1,2,5: Part of BusyBox, so already present in base system  
-3: *iw.tcz*
+3: *iw.tcz*  
 4: *wpa_supplicant[-dbus].tcz*  
 Loading all the dependencies on Tiny Core Linux: `tce-load -wi wpa_supplicant-dbus iw`
 
