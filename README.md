@@ -20,8 +20,8 @@ Installing all the dependencies on Debian/Devuan: `sudo apt install procps net-t
 
 **Tiny Core Linux extensions names:**  
 1,2,5: Part of BusyBox, so already present in base system  
-3: *iw.tcz*  
-4: *wpa_supplicant[-dbus].tcz*  
+3: *iw*  
+4: *wpa_supplicant[-dbus]*  
 Loading all the dependencies on Tiny Core Linux: `tce-load -wi wpa_supplicant-dbus iw`
 
 # Installation
