@@ -24,9 +24,9 @@ Installing all the dependencies on Debian/Devuan: `sudo apt install procps net-t
 4: *wpa_supplicant[-dbus]*  
 Loading all the dependencies on Tiny Core Linux: `tce-load -wi wpa_supplicant-dbus iw`
 
-# Installation
+# Example installation
 ```
-$ sudo apt install procps net-tools wireless-tools wpasupplicant udhcpc
+$ sudo apt install procps net-tools iw wpasupplicant udhcpc
 $ cd /tmp
 $ wget https://github.com/bdantas/autowifi/archive/master.zip
 $ unzip master.zip
