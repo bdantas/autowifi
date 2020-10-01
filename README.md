@@ -18,11 +18,11 @@ Simple shell script for GNU/Linux that connects to the highest-priority wireless
 5: *udhcpc* (also available as a BusyBox applet)  
 Installing all the dependencies on Debian/Devuan: `sudo apt install procps net-tools iw wpasupplicant udhcpc`
 
-**Tiny Core Linux extensions names:**  
+**Tiny Core Linux extension names:**  
 1,2,5: Part of BusyBox, so already present in base system  
 3: *iw*  
-4: *wpa_supplicant[-dbus]*  
-Loading all the dependencies on Tiny Core Linux: `tce-load -wi wpa_supplicant-dbus iw`
+4: *wpa_supplicant-dbus*  
+Loading all the dependencies on Tiny Core Linux: `tce-load -wi iw wpa_supplicant-dbus`
 
 # Example installation
 ```
