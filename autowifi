@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# autowifi v8.2
+# autowifi v8.3
 # Bruno "GNUser" Dantas GPLv3
 
 # user variables:
@@ -26,6 +26,7 @@ start_fresh()
 	pkill -f iw
 	pkill -f wpa_supplicant
 	pkill -f udhcpc
+	ifconfig $iface down; ifconfig $iface up
 }
 
 scan()
