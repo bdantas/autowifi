@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# autowifi v8.1
+# autowifi v8.2
 # Bruno "GNUser" Dantas GPLv3
 
 # user variables:
@@ -26,19 +26,12 @@ start_fresh()
 	pkill -f iw
 	pkill -f wpa_supplicant
 	pkill -f udhcpc
-
-	# reload kernel module to flush cached scan results
-	ifconfig $iface down
-	module=$(basename $(readlink -f /sys/class/net/$iface/device/driver/module))
-	modprobe -r $module
-	modprobe $module
-	ifconfig $iface up
 }
 
 scan()
 {
 	echo "Scanning available networks..."
-	iw dev $iface scan > $scan_results
+	iw dev $iface scan flush > $scan_results
 }
 
 search()
